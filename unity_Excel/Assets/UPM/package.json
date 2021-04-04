@@ -1,0 +1,21 @@
+{
+  "name": "blueback.excel",
+  "displayName": "Excel",
+  "version": "0.0.1",
+  "unity": "2020.1",
+  "description": "Excel操作",
+  "author": {
+    "name": "BlueBack",
+    "url": "https://github.com/bluebackblue"
+  },
+  "keywords": [
+    "excel"
+  ],
+  "dependencies": {},
+  "samples": [
+    {
+      "displayName": "Convert",
+      "path": "Samples~/Convert"
+    }
+  ]
+}
