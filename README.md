@@ -1,5 +1,6 @@
 # BlueBack.Excel
-JSON操作
+Excel操作
+* JsonItemへのコンバート
 
 ## ライセンス
 MIT License
@@ -10,7 +11,7 @@ Unity 2020.2.4f1
 
 ## URL
 ### 最新
-* https://github.com/bluebackblue/Excel.git?path=unity_Excel/Assets/UPM#0.0.3
+* https://github.com/bluebackblue/Excel.git?path=unity_Excel/Assets/UPM#0.0.1
 ### 開発
 * https://github.com/bluebackblue/Excel.git?path=unity_Excel/Assets/UPM
 
@@ -31,5 +32,6 @@ Gitクライアントがインストールされている必要がある。
 ```
 ```
 
-## 使用ライセンス
+## 依存
 * https://github.com/bluebackblue/Excel/blob/main/unity_Excel/Assets/ThirdParty/ExcelDataReader/
+* https://github.com/bluebackblue/JsonItem
