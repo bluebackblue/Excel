@@ -6,6 +6,13 @@ Excel操作
 MIT License
 * https://github.com/bluebackblue/Excel/blob/main/LICENSE
 
+## 外部依存 / 使用ライセンス等
+* https://github.com/bluebackblue/Excel/blob/main/unity_Excel/Assets/ThirdParty/ExcelDataReader/
+* https://github.com/bluebackblue/JsonItem
+
+### サンプルの外部依存 / 使用ライセンス等
+* https://github.com/bluebackblue/AssetLib
+
 ## 動作確認
 Unity 2020.2.4f1
 
@@ -32,6 +39,3 @@ Gitクライアントがインストールされている必要がある。
 ```
 ```
 
-## 依存
-* https://github.com/bluebackblue/Excel/blob/main/unity_Excel/Assets/ThirdParty/ExcelDataReader/
-* https://github.com/bluebackblue/JsonItem
