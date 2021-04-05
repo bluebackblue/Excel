@@ -7,9 +7,9 @@
 */
 
 
-/** BlueBack.Excel
+/** BlueBack.Excel.ConvertToJson
 */
-namespace BlueBack.Excel
+namespace BlueBack.Excel.ConvertToJson
 {
 	/** ConvertToJson
 	*/
@@ -30,8 +30,12 @@ namespace BlueBack.Excel
 				System.Tuple<string,JsonItem.JsonItem> t_result = ConvertActiveSheet(a_excel);
 				if(t_result.Item1 == null){
 					//スキップ。
+				}else if(t_excel_jsonitem.IsExistItem(t_result.Item1) == true){
+					#if(DEF_BLUEBACK_EXCEL_ASSERT)
+					DebugTool.Assert(false,"already_exist : " + t_result.Item1);
+					#endif
 				}else{
-					t_excel_jsonitem.AddItem(t_result.Item1, t_result.Item2,false);
+					t_excel_jsonitem.AddItem(t_result.Item1,t_result.Item2,false);
 				}
 			}
 
@@ -53,14 +57,14 @@ namespace BlueBack.Excel
 
 			//左上が終端の場合はスキップする。
 			{
-				Result<CellPosition> t_pos_end = Find.FindCellTopPriorityFromActiveSheetRange(a_excel,0,0,0,0,t_param.command_end);
+				Result<CellPosition> t_pos_end = Find.FindCellTopPriorityFromActiveSheetRange(a_excel,0,0,0,0,Config.COMMAND_END);
 				if(t_pos_end.success == true){
 					return new System.Tuple<string,JsonItem.JsonItem>(null,null);
 				}
 			}
 
 			//ルート検索。
-			Result<CellPosition> t_pos_root = Find.FindCellLeftTopPriorityFromActiveSheetRange(a_excel,0,0,t_param.searchsize,t_param.command_root);
+			Result<CellPosition> t_pos_root = Find.FindCellLeftTopPriorityFromActiveSheetRange(a_excel,0,0,t_param.searchsize,Config.COMMAND_ROOT);
 			if(t_pos_root.success == false){
 				#if(DEF_BLUEBACK_EXCEL_ASSERT)
 				DebugTool.Assert(false,"no_root");
@@ -73,14 +77,14 @@ namespace BlueBack.Excel
 
 			//ルートより前に終端がある場合はスキップする。
 			{
-				Result<CellPosition> t_pos_end_skip = Find.FindCellTopPriorityFromActiveSheetRange(a_excel,0,0,t_pos_root.value.x,t_pos_root.value.y,t_param.command_end);
+				Result<CellPosition> t_pos_end_skip = Find.FindCellTopPriorityFromActiveSheetRange(a_excel,0,0,t_pos_root.value.x,t_pos_root.value.y,Config.COMMAND_END);
 				if(t_pos_end_skip.success == true){
 					return new System.Tuple<string,JsonItem.JsonItem>(null,null);
 				}
 			}
 
 			//Ｙ方向終端。
-			Result<CellPosition> t_pos_end_y = Find.FindCellLeftPriorityFromActiveSheetRange(a_excel,t_pos_root.value.x,t_pos_root.value.y,t_pos_root.value.x,t_pos_root.value.y + t_param.searchsize,t_param.command_end);
+			Result<CellPosition> t_pos_end_y = Find.FindCellLeftPriorityFromActiveSheetRange(a_excel,t_pos_root.value.x,t_pos_root.value.y,t_pos_root.value.x,t_pos_root.value.y + t_param.searchsize,Config.COMMAND_END);
 			if(t_pos_end_y.success == false){
 				#if(DEF_BLUEBACK_EXCEL_ASSERT)
 				DebugTool.Assert(false,"no_end_y");
@@ -89,7 +93,7 @@ namespace BlueBack.Excel
 			}
 
 			//パラメータ。タイプ。
-			Result<CellPosition> t_pos_param_type = Find.FindCellLeftPriorityFromActiveSheetRange(a_excel,t_pos_root.value.x,t_pos_root.value.y,t_pos_root.value.x,t_pos_end_y.value.y,t_param.command_param_type);
+			Result<CellPosition> t_pos_param_type = Find.FindCellLeftPriorityFromActiveSheetRange(a_excel,t_pos_root.value.x,t_pos_root.value.y,t_pos_root.value.x,t_pos_end_y.value.y,Config.COMMAND_PARAM_TYPE);
 			if(t_pos_param_type.success == false){
 				#if(DEF_BLUEBACK_EXCEL_ASSERT)
 				DebugTool.Assert(false,"no_param_type");
@@ -98,7 +102,7 @@ namespace BlueBack.Excel
 			}
 
 			//パラメータ。名前。
-			Result<CellPosition> t_pos_param_name = Find.FindCellLeftPriorityFromActiveSheetRange(a_excel,t_pos_root.value.x,t_pos_root.value.y,t_pos_root.value.x,t_pos_end_y.value.y,t_param.command_param_name);
+			Result<CellPosition> t_pos_param_name = Find.FindCellLeftPriorityFromActiveSheetRange(a_excel,t_pos_root.value.x,t_pos_root.value.y,t_pos_root.value.x,t_pos_end_y.value.y,Config.COMMAND_PARAM_NAME);
 			if(t_pos_param_name.success == false){
 				#if(DEF_BLUEBACK_EXCEL_ASSERT)
 				DebugTool.Assert(false,"no_param_name");
@@ -107,7 +111,7 @@ namespace BlueBack.Excel
 			}
 
 			//Ｘ方向終端。
-			Result<CellPosition> t_pos_end_x = Find.FindCellTopPriorityFromActiveSheetRange(a_excel,t_pos_root.value.x + 1,t_pos_root.value.y,t_pos_root.value.x + t_param.searchsize,t_pos_end_y.value.y,t_param.command_end);
+			Result<CellPosition> t_pos_end_x = Find.FindCellTopPriorityFromActiveSheetRange(a_excel,t_pos_root.value.x + 1,t_pos_root.value.y,t_pos_root.value.x + t_param.searchsize,t_pos_end_y.value.y,Config.COMMAND_END);
 			if(t_pos_end_y.success == false){
 				#if(DEF_BLUEBACK_EXCEL_ASSERT)
 				DebugTool.Assert(false,"no_end_x");
@@ -124,15 +128,15 @@ namespace BlueBack.Excel
 					
 					#pragma warning disable 0162
 					switch(t_cell_param_type.value){
-					case "string":
+					case Config.PARAMTYPE_STRING:
 						{
 							t_param_type = ParamType.StringType;
 						}break;
-					case "int":
+					case Config.PARAMTYPE_INT:
 						{
 							t_param_type = ParamType.IntType;
 						}break;
-					case "float":
+					case Config.PARAMTYPE_FLOAT:
 						{
 							t_param_type = ParamType.FloatType;
 						}break;
@@ -173,7 +177,7 @@ namespace BlueBack.Excel
 				JsonItem.JsonItem t_sheet_json = new JsonItem.JsonItem(new JsonItem.Value_IndexArray());
 
 				for(int yy=t_pos_root.value.y + 1;yy<t_pos_end_y.value.y;yy++){
-					if(Find.CheckCellFromActiveSheet(a_excel,t_pos_root.value.x,yy,"*") == true){
+					if(Find.CheckCellFromActiveSheet(a_excel,t_pos_root.value.x,yy,Config.COMMAND_ENABLELINE) == true){
 						
 						//ラインJSON作成。
 						JsonItem.JsonItem t_line_jsonitem = new JsonItem.JsonItem(new JsonItem.Value_AssociativeArray());

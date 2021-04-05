@@ -1,7 +1,7 @@
 {
   "name": "blueback.excel",
   "displayName": "Excel",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "unity": "2020.1",
   "description": "Excel操作",
   "author": {

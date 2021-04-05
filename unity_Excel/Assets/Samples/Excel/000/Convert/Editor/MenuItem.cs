@@ -18,7 +18,7 @@ namespace Samples.Excel.Convert.Editor
 
 			BlueBack.Excel.Excel t_excel = new BlueBack.Excel.Excel(new BlueBack.Excel.EDR.Engine());
 			t_excel.ReadOpen(t_path);
-			BlueBack.JsonItem.JsonItem t_excel_jsonitem = BlueBack.Excel.ConvertToJson.Convert(t_excel);
+			BlueBack.JsonItem.JsonItem t_excel_jsonitem = BlueBack.Excel.ConvertToJson.ConvertToJson.Convert(t_excel);
 			t_excel.Close();
 
 			foreach(string t_sheetname in t_excel_jsonitem.GetAssociativeKeyList()){

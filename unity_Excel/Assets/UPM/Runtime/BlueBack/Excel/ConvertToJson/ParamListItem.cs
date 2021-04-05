@@ -7,9 +7,9 @@
 */
 
 
-/** BlueBack.Excel
+/** BlueBack.Excel.ConvertToJson
 */
-namespace BlueBack.Excel
+namespace BlueBack.Excel.ConvertToJson
 {
 	/** ParamListItem
 	*/
