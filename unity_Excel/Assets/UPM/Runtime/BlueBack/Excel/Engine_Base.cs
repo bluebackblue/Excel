@@ -16,11 +16,8 @@ namespace BlueBack.Excel
 	public interface Engine_Base
 	{
 		/** [BlueBack.Excel.Engine_Base]開く。
-
-			a_assets_path_with_extention : 「Assets」からの相対パス。拡張子付き。
-
 		*/
-		public bool ReadOpen(string a_assets_path_with_extention);
+		public bool ReadOpen(byte[] a_data);
 
 		/** [BlueBack.Excel.Engine_Base]閉じる。
 		*/

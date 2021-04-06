@@ -1,5 +1,7 @@
 # BlueBack.Excel
 Excel操作
+* スプレッドシートからの読み込み
+* バイナリからの読み込み
 * JsonItemへのコンバート
 
 ## ライセンス
@@ -18,7 +20,7 @@ Unity 2020.2.4f1
 
 ## URL
 ### 最新
-* https://github.com/bluebackblue/Excel.git?path=unity_Excel/Assets/UPM#0.0.3
+* https://github.com/bluebackblue/Excel.git?path=unity_Excel/Assets/UPM#0.0.4
 ### 開発
 * https://github.com/bluebackblue/Excel.git?path=unity_Excel/Assets/UPM
 

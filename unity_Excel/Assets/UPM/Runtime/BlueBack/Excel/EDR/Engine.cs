@@ -42,33 +42,21 @@ namespace BlueBack.Excel.EDR
 		}
 
 		/** [BlueBack.Excel.Engine_Base]開く。
-
-			a_assets_path_with_extention : 「Assets」からの相対パス。拡張子付き。
-
 		*/
-		public bool ReadOpen(string a_assets_path_with_extention)
+		public bool ReadOpen(byte[] a_data)
 		{
 			#pragma warning disable 0168
 			try{
-				using(System.IO.FileStream t_stream = System.IO.File.Open(UnityEngine.Application.dataPath + '\\' + a_assets_path_with_extention,System.IO.FileMode.Open,System.IO.FileAccess.Read,System.IO.FileShare.ReadWrite)){
-					if(t_stream != null){
-						using(ExcelDataReader.IExcelDataReader t_reader = ExcelDataReader.ExcelReaderFactory.CreateOpenXmlReader(t_stream)){
-							if(t_reader != null){
-								this.excel = ExcelDataReader.ExcelDataReaderExtensions.AsDataSet(t_reader);
-								this.activesheet = null;
-								this.activecell = null;
+				using(System.IO.Stream t_stream = new ReadStream(a_data))
+				using(ExcelDataReader.IExcelDataReader t_reader = ExcelDataReader.ExcelReaderFactory.CreateOpenXmlReader(t_stream)){
+					if(t_reader != null){
+						this.excel = ExcelDataReader.ExcelDataReaderExtensions.AsDataSet(t_reader);
+						this.activesheet = null;
+						this.activecell = null;
 
-								return true;
-							}else{
-								//破損。
-
-								#if(DEF_BLUEBACK_EXCEL_ASSERT)
-								DebugTool.Assert(false);
-								#endif
-							}
-						}
+						return true;
 					}else{
-						//不明。
+						//破損。
 
 						#if(DEF_BLUEBACK_EXCEL_ASSERT)
 						DebugTool.Assert(false);

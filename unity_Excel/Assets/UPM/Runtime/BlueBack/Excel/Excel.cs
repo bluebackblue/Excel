@@ -27,13 +27,10 @@ namespace BlueBack.Excel
 		}
 
 		/** ReadOpen
-
-			a_assets_path_with_extention : 「Assets」からの相対パス。拡張子付き。
-
 		*/
-		public void ReadOpen(string a_assets_path_with_extention)
+		public void ReadOpen(byte[] a_data)
 		{
-			this.engine.ReadOpen(a_assets_path_with_extention);
+			this.engine.ReadOpen(a_data);
 		}
 
 		/** Close
