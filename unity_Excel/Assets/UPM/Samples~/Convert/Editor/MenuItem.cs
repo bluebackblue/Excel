@@ -14,8 +14,8 @@ namespace Samples.Excel.Convert.Editor
 		[UnityEditor.MenuItem("サンプル/Excel/Convert/Local")]
 		private static void MenuItem_Local()
 		{
-			string t_path = BlueBack.AssetLib.FindFile.FindFileFistFromAssetsPath("","","^excel\\.xlsx$");
-			byte[] t_data = BlueBack.AssetLib.LoadBinary.LoadBinaryFromAssetsPath(t_path);
+			string t_path = BlueBack.AssetLib.Editor.FindFile.FindFileFistFromAssetsPath("","","^excel\\.xlsx$");
+			byte[] t_data = BlueBack.AssetLib.Editor.LoadBinary.LoadBinaryFromAssetsPath(t_path);
 
 			if(t_data == null){
 				UnityEngine.Debug.Log("data = null");
@@ -48,28 +48,7 @@ namespace Samples.Excel.Convert.Editor
 		[UnityEditor.MenuItem("サンプル/Excel/Convert/Network")]
 		private static void MenuItem_Network()
 		{
-			byte[] t_data = null;
-			{
-				UnityEngine.Networking.UnityWebRequest t_webrequest = UnityEngine.Networking.UnityWebRequest.Get("https://docs.google.com/spreadsheets/d/1ZMGuCvnKSxBRYy8rYv9oh9KjcktXcte12i_5QSmYIPo/export?format=xlsx");
-				UnityEngine.Networking.UnityWebRequestAsyncOperation t_async = t_webrequest.SendWebRequest();
-				while(true){
-					System.Threading.Thread.Sleep(1);
-
-					if(t_webrequest.error != null){
-						UnityEngine.Debug.Log("error : " + t_webrequest.error);
-					}else{
-						if(t_async.isDone == false){
-							//処理中。
-							UnityEngine.Debug.Log("do");
-						}else{
-							//完了。
-							UnityEngine.Debug.Log("fix : " + t_webrequest.responseCode.ToString());
-							t_data = t_webrequest.downloadHandler.data;
-							break;
-						}
-					}
-				}
-			}
+			byte[] t_data = BlueBack.AssetLib.Editor.LoadBinary.LoadBinaryFromUrl("https://docs.google.com/spreadsheets/d/1ZMGuCvnKSxBRYy8rYv9oh9KjcktXcte12i_5QSmYIPo/export?format=xlsx",null);
 
 			if(t_data == null){
 				UnityEngine.Debug.Log("data = null");

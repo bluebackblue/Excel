@@ -20,7 +20,7 @@ Unity 2020.2.4f1
 
 ## URL
 ### 最新
-* https://github.com/bluebackblue/Excel.git?path=unity_Excel/Assets/UPM#0.0.4
+* https://github.com/bluebackblue/Excel.git?path=unity_Excel/Assets/UPM#0.0.5
 ### 開発
 * https://github.com/bluebackblue/Excel.git?path=unity_Excel/Assets/UPM
 
