@@ -54,7 +54,7 @@ namespace Editor.VersionManager
 			try{
 				//download
 				{
-					string t_jsonstring = BlueBack.AssetLib.Editor.LoadText.TryLoadTextFromUrl("https://api.github.com/repos/bluebackblue/AssetLib/releases/latest",null,System.Text.Encoding.GetEncoding("utf-8"));
+					string t_jsonstring = BlueBack.AssetLib.Editor.LoadText.TryLoadTextFromUrl("https://api.github.com/repos/bluebackblue/" + Setting.PACKAGE_NAME + "/releases/latest",null,System.Text.Encoding.GetEncoding("utf-8"));
 					t_jsonstring = BlueBack.JsonItem.Normalize.Convert(t_jsonstring);
 					BlueBack.JsonItem.JsonItem t_jsonitem = new BlueBack.JsonItem.JsonItem(t_jsonstring);
 					this.status.lasttag = t_jsonitem.GetItem("name").GetStringData();

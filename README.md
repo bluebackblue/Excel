@@ -17,7 +17,7 @@ Unity 2020.2.0b14
 
 ## UPM
 ### 最新
-* https://github.com/bluebackblue/Excel.git?path=unity_Excel/Assets/UPM#0.0.12
+* https://github.com/bluebackblue/Excel.git?path=unity_Excel/Assets/UPM#0.0.6
 ### 開発
 * https://github.com/bluebackblue/Excel.git?path=unity_Excel/Assets/UPM
 
@@ -33,12 +33,12 @@ Gitクライアントがインストールされている必要がある。
 * https://git-scm.com/
 
 ## 例
-* ```[root]```の右はシート名。
-* ```[param_type]```の右は型を列挙```string``` ```int``` ```float```が指定可能、```-```始まりはコメント扱い。
-* ```[param_name]```の右は名前を列挙。
+* ```[root]```の右セルはシート名。
+* ```[param_type]```の右セルは型を列挙。```string``` ```int``` ```float```が指定可能。```-```始まりはコメント扱いで無視。
+* ```[param_name]```の右セルは名前を列挙。```[param_type]```と対
 * ```*```のある行がコンバート対象。
 * 終端には```[end]```が必要。
-* 左上が'''[end]''のあるシートはスキップする。
+* 左上に```[end]```があるシートはスキップ
 ![Sample01](/sample00.png)
 ```
 {
