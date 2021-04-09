@@ -3,7 +3,7 @@
 /**
  * Copyright (c) blueback
  * Released under the MIT License
- * @brief İ’èB
+ * @brief è¨­å®šã€‚
 */
 
 
@@ -25,7 +25,7 @@ public class Setting
 
 	/** PACKAGEJSON
 	*/
-	public const string PACKAGEJSON_DISCRIPTION = "Excel‘€ì";
+	public const string PACKAGEJSON_DISCRIPTION = "Excelæ“ä½œ";
 
 	/** PACKAGEJSON
 	*/
@@ -55,88 +55,88 @@ public class Setting
 	*/
 	public static readonly ReadmeMd_StringCreator_Type[] READMEMD_STRINGCREATOR = new ReadmeMd_StringCreator_Type[]{
 
-		/** ŠT—vB
+		/** æ¦‚è¦ã€‚
 		*/
 		(in ReadmeMd_StringCreator_Argument a_argument) => {
 			return new string[]{
 				"# " + AUTHOR_NAME + "." + PACKAGE_NAME,
-				"Excel‘€ì",
-				"* ƒXƒvƒŒƒbƒhƒV[ƒg‚©‚ç‚Ì“Ç‚İ‚İ",
-				"* ƒoƒCƒiƒŠ‚©‚ç‚Ì“Ç‚İ‚İ",
-				"* JsonItem‚Ö‚ÌƒRƒ“ƒo[ƒg",
+				"Excelæ“ä½œ",
+				"* ã‚¹ãƒ—ãƒ¬ãƒƒãƒ‰ã‚·ãƒ¼ãƒˆã‹ã‚‰ã®èª­ã¿è¾¼ã¿",
+				"* ãƒã‚¤ãƒŠãƒªã‹ã‚‰ã®èª­ã¿è¾¼ã¿",
+				"* JsonItemã¸ã®ã‚³ãƒ³ãƒãƒ¼ãƒˆ",
 			};
 		},
 
-		/** ƒ‰ƒCƒZƒ“ƒXB
+		/** ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ã€‚
 		*/
 		(in ReadmeMd_StringCreator_Argument a_argument) => {
 			return new string[]{
-				"## ƒ‰ƒCƒZƒ“ƒX",
+				"## ãƒ©ã‚¤ã‚»ãƒ³ã‚¹",
 				"MIT License",
 				"* https://github.com/bluebackblue/" + PACKAGE_NAME + "/blob/main/LICENSE",
 			};
 		},
 
-		/** ˆË‘¶B
+		/** ä¾å­˜ã€‚
 		*/
 		(in ReadmeMd_StringCreator_Argument a_argument) => {
 			return new string[]{
-				"## ŠO•”ˆË‘¶ / g—pƒ‰ƒCƒZƒ“ƒX“™",
-				"### ƒTƒ“ƒvƒ‹‚Ì‚İ",
+				"## å¤–éƒ¨ä¾å­˜ / ä½¿ç”¨ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ç­‰",
+				"### ã‚µãƒ³ãƒ—ãƒ«ã®ã¿",
 				"* https://github.com/bluebackblue/AssetLib",
 			};
 		},
 
-		/** “®ìŠm”FB
+		/** å‹•ä½œç¢ºèªã€‚
 		*/
 		(in ReadmeMd_StringCreator_Argument a_argument) => {
 			return new string[]{
-				"## “®ìŠm”F",
+				"## å‹•ä½œç¢ºèª",
 				"Unity " + UnityEngine.Application.unityVersion,
 			};
 		},
 
-		/** UPMB
+		/** UPMã€‚
 		*/
 		(in ReadmeMd_StringCreator_Argument a_argument) => {
 			return new string[]{
 				"## UPM",
-				"### ÅV",
+				"### æœ€æ–°",
 				"* https://github.com/bluebackblue/" + PACKAGE_NAME + ".git?path=unity_" + PACKAGE_NAME + "/Assets/UPM#" + a_argument.version,
-				"### ŠJ”­",
+				"### é–‹ç™º",
 				"* https://github.com/bluebackblue/" + PACKAGE_NAME + ".git?path=unity_" + PACKAGE_NAME + "/Assets/UPM",
 			};
 		},
 
-		/** ƒCƒ“ƒXƒg[ƒ‹B 
+		/** ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã€‚ 
 		*/
 		(in ReadmeMd_StringCreator_Argument a_argument) => {
 			return new string[]{
-				"## Unity‚Ö‚Ì’Ç‰Á•û–@",
-				"* Unity‹N“®",
-				"* ƒƒjƒ…[‘I‘ğFuWindow->Package Managerv",
-				"* ƒ{ƒ^ƒ“‘I‘ğFu¶ã‚Ì{ƒ{ƒ^ƒ“v",
-				"* ƒŠƒXƒg‘I‘ğFuAdd package from git URL...v",
-				"* ã‹LUPM‚ÌURL‚ğ’Ç‰Áu https://github.com/``/UPM#ƒo[ƒWƒ‡ƒ“ v",
-				"### ’",
-				"GitƒNƒ‰ƒCƒAƒ“ƒg‚ªƒCƒ“ƒXƒg[ƒ‹‚³‚ê‚Ä‚¢‚é•K—v‚ª‚ ‚éB",
+				"## Unityã¸ã®è¿½åŠ æ–¹æ³•",
+				"* Unityèµ·å‹•",
+				"* ãƒ¡ãƒ‹ãƒ¥ãƒ¼é¸æŠï¼šã€ŒWindow->Package Managerã€",
+				"* ãƒœã‚¿ãƒ³é¸æŠï¼šã€Œå·¦ä¸Šã®ï¼‹ãƒœã‚¿ãƒ³ã€",
+				"* ãƒªã‚¹ãƒˆé¸æŠï¼šã€ŒAdd package from git URL...ã€",
+				"* ä¸Šè¨˜UPMã®URLã‚’è¿½åŠ ã€Œ https://github.com/ï½ï½/UPM#ãƒãƒ¼ã‚¸ãƒ§ãƒ³ ã€",
+				"### æ³¨",
+				"Gitã‚¯ãƒ©ã‚¤ã‚¢ãƒ³ãƒˆãŒã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã•ã‚Œã¦ã„ã‚‹å¿…è¦ãŒã‚ã‚‹ã€‚",
 				"* https://docs.unity3d.com/ja/current/Manual/upm-git.html",
 				"* https://git-scm.com/",
 			};
 		},
 
-		/** —áB
+		/** ä¾‹ã€‚
 		*/
 		(in ReadmeMd_StringCreator_Argument a_argument) => {
 			return new string[]{
-				"## —á",
+				"## ä¾‹",
 
-				"* ```[root]```‚Ì‰EƒZƒ‹‚ÍƒV[ƒg–¼B",
-				"* ```[param_type]```‚Ì‰EƒZƒ‹‚ÍŒ^‚ğ—ñ‹“B```string``` ```int``` ```float```‚ªw’è‰Â”\B```-```n‚Ü‚è‚ÍƒRƒƒ“ƒgˆµ‚¢‚Å–³‹B",
-				"* ```[param_name]```‚Ì‰EƒZƒ‹‚Í–¼‘O‚ğ—ñ‹“B```[param_type]```‚Æ‘Î",
-				"* ```*```‚Ì‚ ‚és‚ªƒRƒ“ƒo[ƒg‘ÎÛB",
-				"* I’[‚É‚Í```[end]```‚ª•K—vB",
-				"* ¶ã‚É```[end]```‚ª‚ ‚éƒV[ƒg‚ÍƒXƒLƒbƒv",
+				"* ```[root]```ã®å³ã‚»ãƒ«ã¯ã‚·ãƒ¼ãƒˆåã€‚",
+				"* ```[param_type]```ã®å³ã‚»ãƒ«ã¯å‹ã‚’åˆ—æŒ™ã€‚```string``` ```int``` ```float```ãŒæŒ‡å®šå¯èƒ½ã€‚```-```å§‹ã¾ã‚Šã¯ã‚³ãƒ¡ãƒ³ãƒˆæ‰±ã„ã§ç„¡è¦–ã€‚",
+				"* ```[param_name]```ã®å³ã‚»ãƒ«ã¯åå‰ã‚’åˆ—æŒ™ã€‚```[param_type]```ã¨å¯¾",
+				"* ```*```ã®ã‚ã‚‹è¡ŒãŒã‚³ãƒ³ãƒãƒ¼ãƒˆå¯¾è±¡ã€‚",
+				"* çµ‚ç«¯ã«ã¯```[end]```ãŒå¿…è¦ã€‚",
+				"* å·¦ä¸Šã«```[end]```ãŒã‚ã‚‹ã‚·ãƒ¼ãƒˆã¯ã‚¹ã‚­ãƒƒãƒ—",
 
 				"![Sample01](/sample00.png)",
 
