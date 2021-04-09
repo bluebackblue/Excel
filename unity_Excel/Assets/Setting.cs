@@ -82,6 +82,7 @@ public class Setting
 		(in ReadmeMd_StringCreator_Argument a_argument) => {
 			return new string[]{
 				"## 外部依存 / 使用ライセンス等",
+				"* https://github.com/bluebackblue/JsonItem",
 				"### サンプルのみ",
 				"* https://github.com/bluebackblue/AssetLib",
 			};

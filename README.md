@@ -9,6 +9,7 @@ MIT License
 * https://github.com/bluebackblue/Excel/blob/main/LICENSE
 
 ## 外部依存 / 使用ライセンス等
+* https://github.com/bluebackblue/JsonItem
 ### サンプルのみ
 * https://github.com/bluebackblue/AssetLib
 
