@@ -47,20 +47,21 @@ namespace BlueBack.Excel.EDR
 		{
 			#pragma warning disable 0168
 			try{
-				using(System.IO.Stream t_stream = new ReadStream(a_data))
-				using(ExcelDataReader.IExcelDataReader t_reader = ExcelDataReader.ExcelReaderFactory.CreateOpenXmlReader(t_stream)){
-					if(t_reader != null){
-						this.excel = ExcelDataReader.ExcelDataReaderExtensions.AsDataSet(t_reader);
-						this.activesheet = null;
-						this.activecell = null;
+				using(System.IO.Stream t_stream = new ReadStream(a_data)){
+					using(ExcelDataReader.IExcelDataReader t_reader = ExcelDataReader.ExcelReaderFactory.CreateReader(t_stream)){
+						if(t_reader != null){
+							this.excel = ExcelDataReader.ExcelDataReaderExtensions.AsDataSet(t_reader);
+							this.activesheet = null;
+							this.activecell = null;
 
-						return true;
-					}else{
-						//破損。
+							return true;
+						}else{
+							//破損。
 
-						#if(DEF_BLUEBACK_EXCEL_ASSERT)
-						DebugTool.Assert(false);
-						#endif
+							#if(DEF_BLUEBACK_EXCEL_ASSERT)
+							DebugTool.Assert(false);
+							#endif
+						}
 					}
 				}
 			}catch(System.Exception t_exception){
