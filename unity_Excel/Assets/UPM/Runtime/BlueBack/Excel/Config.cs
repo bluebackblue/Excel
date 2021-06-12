@@ -22,6 +22,13 @@ namespace BlueBack.Excel
 		public static ErrorProcType ERRORPROC = DebugTool.ErrorProc;
 		#endif
 
+		/** LOGPROC
+		*/
+		#if(DEF_BLUEBACK_EXCEL_LOG)
+		public delegate void LogProcType(string a_message);
+		public static LogProcType LOGPROC = DebugTool.LogProc;
+		#endif
+
 		/** COMMAND
 		*/
 		public const string COMMAND_END = "[end]";

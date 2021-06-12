@@ -54,6 +54,15 @@ namespace BlueBack.Excel
 		}
 		#endif
 
+		/** LogProc
+		*/
+		#if(DEF_BLUEBACK_EXCEL_LOG)
+		public static void LogProc(string a_message)
+		{
+			UnityEngine.Debug.Log(a_message);
+		}
+		#endif
+
 		/** EditorLog
 		*/
 		#if(UNITY_EDITOR)
