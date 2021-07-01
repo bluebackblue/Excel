@@ -14,7 +14,7 @@ MIT License
 * https://github.com/bluebackblue/AssetLib
 
 ## 動作確認
-Unity 2020.2.0b14
+Unity 2021.1.11f1
 
 ## UPM
 ### 最新
