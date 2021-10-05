@@ -140,6 +140,10 @@ namespace BlueBack.Excel.ConvertToJson
 						{
 							t_param_type = ParamType.FloatType;
 						}break;
+					case Config.PARAMTYPE_BOOL:
+						{
+							t_param_type = ParamType.BoolType;
+						}break;
 					default:
 						{
 							if(t_cell_param_type.value.Length == 0){
@@ -197,6 +201,12 @@ namespace BlueBack.Excel.ConvertToJson
 								{
 									Result<double> t_cell_value = a_excel.TryGetCellDoubleFromActiveSheet(t_paramlist[ii].pos_x,yy);
 									t_line_jsonitem.AddItem(t_paramlist[ii].param_name,new JsonItem.JsonItem(new JsonItem.Value_Number<float>((float)t_cell_value.value)),false);
+								}break;
+							case ParamType.BoolType:
+								{
+									Result<string> t_cell_value = a_excel.TryGetCellStringFromActiveSheet(t_paramlist[ii].pos_x,yy);
+									bool t_cell_value_bool = (t_cell_value.value.ToUpper() == "TRUE")?(true):(false);
+									t_line_jsonitem.AddItem(t_paramlist[ii].param_name,new JsonItem.JsonItem(new JsonItem.Value_Number<bool>(t_cell_value_bool)),false);
 								}break;
 							default:
 								{

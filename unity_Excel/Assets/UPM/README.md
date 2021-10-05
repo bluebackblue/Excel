@@ -9,6 +9,7 @@ MIT License
 * https://github.com/bluebackblue/Excel/blob/main/LICENSE
 
 ## 外部依存 / 使用ライセンス等
+* https://github.com/ExcelDataReader/ExcelDataReader
 * https://github.com/bluebackblue/JsonItem
 ### サンプルのみ
 * https://github.com/bluebackblue/AssetLib
@@ -18,7 +19,7 @@ Unity 2021.1.11f1
 
 ## UPM
 ### 最新
-* https://github.com/bluebackblue/Excel.git?path=unity_Excel/Assets/UPM#0.0.11
+* https://github.com/bluebackblue/Excel.git?path=unity_Excel/Assets/UPM#0.0.12
 ### 開発
 * https://github.com/bluebackblue/Excel.git?path=unity_Excel/Assets/UPM
 

@@ -30,6 +30,10 @@ namespace BlueBack.Excel.ConvertToJson
 		/** FloatType
 		*/
 		FloatType,
+
+		/** BoolType
+		*/
+		BoolType,
 	}
 }
 
