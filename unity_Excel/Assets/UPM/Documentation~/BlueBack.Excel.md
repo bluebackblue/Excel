@@ -21,7 +21,7 @@ Unity 2021.1.11f1
 
 ## UPM
 ### 最新
-* https://github.com/bluebackblue/Excel.git?path=unity_Excel/Assets/UPM#0.0.13
+* https://github.com/bluebackblue/Excel.git?path=unity_Excel/Assets/UPM#0.0.14
 ### 開発
 * https://github.com/bluebackblue/Excel.git?path=unity_Excel/Assets/UPM
 
