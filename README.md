@@ -9,9 +9,10 @@ MIT License
 * https://github.com/bluebackblue/Excel/blob/main/LICENSE
 
 ## 外部依存 / 使用ライセンス等
-* https://github.com/bluebackblue/JsonItem
+### ランタイム
+### エディター
 * https://github.com/bluebackblue/Excel
-### サンプルのみ
+### サンプル
 * https://github.com/bluebackblue/AssetLib
 * https://github.com/bluebackblue/Excel
 * https://github.com/bluebackblue/JsonItem
@@ -21,7 +22,7 @@ Unity 2021.1.11f1
 
 ## UPM
 ### 最新
-* https://github.com/bluebackblue/Excel.git?path=unity_Excel/Assets/UPM#0.0.14
+* https://github.com/bluebackblue/Excel.git?path=unity_Excel/Assets/UPM#0.0.15
 ### 開発
 * https://github.com/bluebackblue/Excel.git?path=unity_Excel/Assets/UPM
 
@@ -35,34 +36,4 @@ Unity 2021.1.11f1
 Gitクライアントがインストールされている必要がある。
 * https://docs.unity3d.com/ja/current/Manual/upm-git.html
 * https://git-scm.com/
-
-## 例
-* ```[root]```の右セルはシート名。
-* ```[param_type]```の右セルは型を列挙。```string``` ```int``` ```float```が指定可能。```-```始まりはコメント扱いで無視。
-* ```[param_name]```の右セルは名前を列挙。```[param_type]```と対
-* ```*```のある行がコンバート対象。
-* 終端には```[end]```が必要。
-* 左上に```[end]```があるシートはスキップ
-![Sample01](/sample00.png)
-```
-{
-	"sheetname" : [
-		{
-			"namae" : "satou",
-			"nedan" : 10,
-			"val" : 1.3
-		},
-		{
-			"namae" : "sio",
-			"nedan" : 20,
-			"val" : 1.4
-		},
-		{
-			"namae" : "shoyu",
-			"nedan" : 30,
-			"val" : 1.5
-		}
-	]
-}
-```
 

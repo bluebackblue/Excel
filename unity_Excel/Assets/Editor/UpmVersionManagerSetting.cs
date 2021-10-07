@@ -30,10 +30,10 @@ namespace Editor
 				//author_name
 				t_param.author_name = "BlueBack";
 
-				//author_url
+				//git_url
 				t_param.git_url = "https://github.com/";
 
-				//author_url
+				//git_author
 				t_param.git_author = "bluebackblue";
 
 				//package_name
@@ -54,7 +54,9 @@ namespace Editor
 				};
 
 				//packagejson_dependencies
-				t_param.packagejson_dependencies = new System.Collections.Generic.Dictionary<string,string>();
+				t_param.packagejson_dependencies = new System.Collections.Generic.Dictionary<string,string>(){
+					//{"blueback.xxxxx","https://github.com/xxxxx/xxxxx"},
+				};
 
 				//asmdef_runtime
 				t_param.asmdef_runtime = new BlueBack.UpmVersionManager.Editor.Object_Setting.Param.AsmdefItem{
@@ -112,7 +114,7 @@ namespace Editor
 					/*
 					"## [0.0.0] - 0000-00-00",
 					"### Changes",
-					"- Init",
+					"- xxxxxx",
 					"",
 					*/
 
@@ -147,39 +149,9 @@ namespace Editor
 
 					//依存。
 					(in BlueBack.UpmVersionManager.Editor.Object_Setting.Creator_Argument a_argument) => {
-
 						System.Collections.Generic.List<string> t_list = new System.Collections.Generic.List<string>();
 						t_list.Add("## 外部依存 / 使用ライセンス等");
-
-						{
-							System.Collections.Generic.HashSet<string> t_url_list = new System.Collections.Generic.HashSet<string>();
-
-							//runtine
-							for(int ii=0;ii<a_argument.param.asmdef_runtime.reference_list.Length;ii++){
-								t_url_list.Add("* " + a_argument.param.asmdef_runtime.reference_list[ii].url);
-							}
-
-							//editor
-							for(int ii=0;ii<a_argument.param.asmdef_editor.reference_list.Length;ii++){
-								t_url_list.Add("* " + a_argument.param.asmdef_editor.reference_list[ii].url);
-							}
-
-							t_list.AddRange(t_url_list);
-						}
-
-						t_list.Add("### サンプルのみ");
-						
-						{
-							System.Collections.Generic.HashSet<string> t_url_list = new System.Collections.Generic.HashSet<string>();
-
-							//sample
-							for(int ii=0;ii<a_argument.param.asmdef_sample.reference_list.Length;ii++){
-								t_url_list.Add("* " + a_argument.param.asmdef_sample.reference_list[ii].url);
-							}
-
-							t_list.AddRange(t_url_list);
-						}
-
+						t_list.AddRange(BlueBack.UpmVersionManager.Editor.Object_Setting.Create_RootReadMd_Asmdef_Dependence(a_argument));
 						return t_list.ToArray();
 					},
 
@@ -219,43 +191,15 @@ namespace Editor
 					},
 
 					//例。
+					#if(false)
 					(in BlueBack.UpmVersionManager.Editor.Object_Setting.Creator_Argument a_argument) => {
 						return new string[]{
 							"## 例",
-
-							"* ```[root]```の右セルはシート名。",
-							"* ```[param_type]```の右セルは型を列挙。```string``` ```int``` ```float```が指定可能。```-```始まりはコメント扱いで無視。",
-							"* ```[param_name]```の右セルは名前を列挙。```[param_type]```と対",
-							"* ```*```のある行がコンバート対象。",
-							"* 終端には```[end]```が必要。",
-							"* 左上に```[end]```があるシートはスキップ",
-
-							"![Sample01](/sample00.png)",
-
 							"```",
-							"{",
-							"	\"sheetname\" : [",
-							"		{",
-							"			\"namae\" : \"satou\",",
-							"			\"nedan\" : 10,",
-							"			\"val\" : 1.3",
-							"		},",
-							"		{",
-							"			\"namae\" : \"sio\",",
-							"			\"nedan\" : 20,",
-							"			\"val\" : 1.4",
-							"		},",
-							"		{",
-							"			\"namae\" : \"shoyu\",",
-							"			\"nedan\" : 30,",
-							"			\"val\" : 1.5",
-							"		}",
-							"	]",
-							"}",
 							"```",
-
 						};
 					},
+					#endif
 
 				};
 			}
@@ -265,4 +209,5 @@ namespace Editor
 	}
 }
 #endif
+
 
