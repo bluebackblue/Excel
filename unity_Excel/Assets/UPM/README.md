@@ -9,10 +9,12 @@ MIT License
 * https://github.com/bluebackblue/Excel/blob/main/LICENSE
 
 ## 外部依存 / 使用ライセンス等
-* https://github.com/ExcelDataReader/ExcelDataReader
 * https://github.com/bluebackblue/JsonItem
+* https://github.com/bluebackblue/Excel
 ### サンプルのみ
 * https://github.com/bluebackblue/AssetLib
+* https://github.com/bluebackblue/Excel
+* https://github.com/bluebackblue/JsonItem
 
 ## 動作確認
 Unity 2021.1.11f1
