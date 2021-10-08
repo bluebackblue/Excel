@@ -7,16 +7,13 @@
 */
 
 
-#define USESTREAM
-
-
 /** BlueBack.Excel
 */
 namespace BlueBack.Excel
 {
 	/** ReadStream
 	*/
-	public class ReadStream : System.IO.Stream
+	public sealed class ReadStream : System.IO.Stream
 	{
 		/** data
 		*/

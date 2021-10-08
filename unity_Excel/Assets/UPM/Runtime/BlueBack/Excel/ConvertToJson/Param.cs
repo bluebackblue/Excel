@@ -11,20 +11,21 @@
 */
 namespace BlueBack.Excel.ConvertToJson
 {
-	/** Param
+	/** ConvertParam
 	*/
-	public class Param
+	public struct ConvertParam
 	{
 		/** searc
 		*/
 		public int searchsize;
 
-		/** constructor
+		/** CreateDefault
 		*/
-		public Param()
+		public static ConvertParam CreateDefault()
 		{
-			//searchsize
-			this.searchsize = 1000;
+			return new ConvertParam(){
+				searchsize = 1000,
+			};
 		}
 	}
 }

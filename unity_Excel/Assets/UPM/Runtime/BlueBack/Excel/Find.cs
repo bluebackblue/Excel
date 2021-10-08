@@ -13,7 +13,7 @@ namespace BlueBack.Excel
 {
 	/** Find
 	*/
-	public class Find
+	public static class Find
 	{
 		/** CheckCellFromActiveSheet
 		*/

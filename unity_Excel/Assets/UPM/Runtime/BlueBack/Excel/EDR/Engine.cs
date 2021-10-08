@@ -13,7 +13,7 @@ namespace BlueBack.Excel.EDR
 {
 	/** Engine
 	*/
-	public class Engine : Engine_Base
+	public sealed class Engine : Engine_Base
 	{
 		/** excel
 		*/

@@ -13,7 +13,7 @@ namespace BlueBack.Excel
 {
 	/** Excel
 	*/
-	public class Excel
+	public sealed class Excel
 	{
 		/** engine
 		*/

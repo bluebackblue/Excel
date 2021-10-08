@@ -1,0 +1,19 @@
+{
+   "overview":[
+      "Excel操作",
+      "* スプレッドシートからの読み込み",
+      "* バイナリからの読み込み",
+      "* JsonItemへのコンバート",
+   ],
+   "keyword":[
+      "asset"
+   ],
+   "root_readmemd_path":"../../README.md",
+   "discription":"Excel操作",
+   "git_path":"unity_Excel/Assets/UPM",
+   "git_author":"bluebackblue",
+   "git_url":"https://github.com/",
+   "author_name":"BlueBack",
+   "need_unity_version":"2020.1",
+   "package_name":"Excel"
+}

@@ -13,21 +13,21 @@ namespace BlueBack.Excel.ConvertToJson
 {
 	/** ConvertToJson
 	*/
-	public class ConvertToJson
+	public static class ConvertToJson
 	{
 		/** Convert
 
 			a_assets_path
 
 		*/
-		public static JsonItem.JsonItem Convert(Excel a_excel)
+		public static JsonItem.JsonItem Convert(Excel a_excel,in ConvertParam a_convertparam)
 		{
 			JsonItem.JsonItem t_excel_jsonitem = new JsonItem.JsonItem(new JsonItem.Value_AssociativeArray());
 
 			int ii_max = a_excel.GetSheetCount();
 			for(int ii=0;ii<ii_max;ii++){
 				a_excel.SetActiveSheet(ii);
-				System.Tuple<string,JsonItem.JsonItem> t_result = ConvertActiveSheet(a_excel);
+				System.Tuple<string,JsonItem.JsonItem> t_result = ConvertActiveSheet(a_excel,a_convertparam);
 				if(t_result.Item1 == null){
 					//スキップ。
 				}else if(t_excel_jsonitem.IsExistItem(t_result.Item1) == true){
@@ -48,13 +48,8 @@ namespace BlueBack.Excel.ConvertToJson
 			return tuple 2 : JsonItem。
 
 		*/
-		public static System.Tuple<string,JsonItem.JsonItem> ConvertActiveSheet(Excel a_excel,Param a_param = null)
+		public static System.Tuple<string,JsonItem.JsonItem> ConvertActiveSheet(Excel a_excel,in ConvertParam a_convertparam)
 		{
-			Param t_param = a_param;
-			if(t_param == null){
-				t_param = new Param();
-			}
-
 			//左上が終端の場合はスキップする。
 			{
 				Result<CellPosition> t_pos_end = Find.FindCellTopPriorityFromActiveSheetRange(a_excel,0,0,0,0,Config.COMMAND_END);
@@ -64,7 +59,7 @@ namespace BlueBack.Excel.ConvertToJson
 			}
 
 			//ルート検索。
-			Result<CellPosition> t_pos_root = Find.FindCellLeftTopPriorityFromActiveSheetRange(a_excel,0,0,t_param.searchsize,Config.COMMAND_ROOT);
+			Result<CellPosition> t_pos_root = Find.FindCellLeftTopPriorityFromActiveSheetRange(a_excel,0,0,a_convertparam.searchsize,Config.COMMAND_ROOT);
 			if(t_pos_root.success == false){
 				#if(DEF_BLUEBACK_EXCEL_ASSERT)
 				DebugTool.Assert(false,"no_root");
@@ -84,7 +79,7 @@ namespace BlueBack.Excel.ConvertToJson
 			}
 
 			//Ｙ方向終端。
-			Result<CellPosition> t_pos_end_y = Find.FindCellLeftPriorityFromActiveSheetRange(a_excel,t_pos_root.value.x,t_pos_root.value.y,t_pos_root.value.x,t_pos_root.value.y + t_param.searchsize,Config.COMMAND_END);
+			Result<CellPosition> t_pos_end_y = Find.FindCellLeftPriorityFromActiveSheetRange(a_excel,t_pos_root.value.x,t_pos_root.value.y,t_pos_root.value.x,t_pos_root.value.y + a_convertparam.searchsize,Config.COMMAND_END);
 			if(t_pos_end_y.success == false){
 				#if(DEF_BLUEBACK_EXCEL_ASSERT)
 				DebugTool.Assert(false,"no_end_y");
@@ -111,7 +106,7 @@ namespace BlueBack.Excel.ConvertToJson
 			}
 
 			//Ｘ方向終端。
-			Result<CellPosition> t_pos_end_x = Find.FindCellTopPriorityFromActiveSheetRange(a_excel,t_pos_root.value.x + 1,t_pos_root.value.y,t_pos_root.value.x + t_param.searchsize,t_pos_end_y.value.y,Config.COMMAND_END);
+			Result<CellPosition> t_pos_end_x = Find.FindCellTopPriorityFromActiveSheetRange(a_excel,t_pos_root.value.x + 1,t_pos_root.value.y,t_pos_root.value.x + a_convertparam.searchsize,t_pos_end_y.value.y,Config.COMMAND_END);
 			if(t_pos_end_y.success == false){
 				#if(DEF_BLUEBACK_EXCEL_ASSERT)
 				DebugTool.Assert(false,"no_end_x");

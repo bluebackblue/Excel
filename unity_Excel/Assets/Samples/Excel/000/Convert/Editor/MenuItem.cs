@@ -25,7 +25,7 @@ namespace Samples.Excel.Convert.Editor
 				BlueBack.Excel.Excel t_excel = new BlueBack.Excel.Excel(new BlueBack.Excel.EDR.Engine());
 			
 				t_excel.ReadOpen(t_data);
-				BlueBack.JsonItem.JsonItem t_excel_jsonitem = BlueBack.Excel.ConvertToJson.ConvertToJson.Convert(t_excel);
+				BlueBack.JsonItem.JsonItem t_excel_jsonitem = BlueBack.Excel.ConvertToJson.ConvertToJson.Convert(t_excel,BlueBack.Excel.ConvertToJson.ConvertParam.CreateDefault());
 				t_excel.Close();
 
 				foreach(string t_sheetname in t_excel_jsonitem.GetAssociativeKeyList()){
@@ -58,7 +58,7 @@ namespace Samples.Excel.Convert.Editor
 				BlueBack.Excel.Excel t_excel = new BlueBack.Excel.Excel(new BlueBack.Excel.EDR.Engine());
 			
 				t_excel.ReadOpen(t_data);
-				BlueBack.JsonItem.JsonItem t_excel_jsonitem = BlueBack.Excel.ConvertToJson.ConvertToJson.Convert(t_excel);
+				BlueBack.JsonItem.JsonItem t_excel_jsonitem = BlueBack.Excel.ConvertToJson.ConvertToJson.Convert(t_excel,BlueBack.Excel.ConvertToJson.ConvertParam.CreateDefault());
 				t_excel.Close();
 
 				foreach(string t_sheetname in t_excel_jsonitem.GetAssociativeKeyList()){

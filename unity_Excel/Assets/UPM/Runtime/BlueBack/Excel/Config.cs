@@ -13,7 +13,7 @@ namespace BlueBack.Excel
 {
 	/** Config
 	*/
-	public class Config
+	public static class Config
 	{
 		/** COMMAND
 		*/

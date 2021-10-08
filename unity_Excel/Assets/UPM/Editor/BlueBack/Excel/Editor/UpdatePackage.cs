@@ -15,7 +15,7 @@ namespace BlueBack.Excel.Editor
 	/** UpdatePackage
 	*/
 	#if(!DEF_USER_BLUEBACK_EXCEL)
-	public class UpdatePackage
+	public static class UpdatePackage
 	{
 		/** MenuItem_BlueBack_Excel_UpdatePackage
 		*/
