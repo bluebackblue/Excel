@@ -8,13 +8,13 @@ Excel操作
 MIT License
 * https://github.com/bluebackblue/Excel/blob/main/LICENSE
 
-## 外部依存 / 使用ライセンス等
+## 依存 / 使用ライセンス等
 ### ランタイム
 ### エディター
 * https://github.com/bluebackblue/Excel
 ### サンプル
-* https://github.com/bluebackblue/AssetLib
 * https://github.com/bluebackblue/Excel
+* https://github.com/bluebackblue/AssetLib
 * https://github.com/bluebackblue/JsonItem
 
 ## 動作確認
@@ -22,7 +22,7 @@ Unity 2021.1.11f1
 
 ## UPM
 ### 最新
-* https://github.com/bluebackblue/Excel.git?path=unity_Excel/Assets/UPM#0.0.14
+* https://github.com/bluebackblue/Excel.git?path=unity_Excel/Assets/UPM#0.0.15
 ### 開発
 * https://github.com/bluebackblue/Excel.git?path=unity_Excel/Assets/UPM
 
