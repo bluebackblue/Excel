@@ -6,25 +6,25 @@ Excel操作
 
 ## ライセンス
 MIT License
-* https://github.com/bluebackblue/Excel/blob/main/LICENSE
+* https://github.com/bluebackblue/UpmExcel/blob/main/LICENSE
 
 ## 依存 / 使用ライセンス等
 ### ランタイム
 ### エディター
-* https://github.com/bluebackblue/Excel
+* https://github.com/bluebackblue/UpmExcel
 ### サンプル
-* https://github.com/bluebackblue/Excel
-* https://github.com/bluebackblue/AssetLib
-* https://github.com/bluebackblue/JsonItem
+* https://github.com/bluebackblue/UpmExcel
+* https://github.com/bluebackblue/UpmAssetLib
+* https://github.com/bluebackblue/UpmJsonItem
 
 ## 動作確認
 Unity 2021.1.11f1
 
 ## UPM
 ### 最新
-* https://github.com/bluebackblue/Excel.git?path=unity_Excel/Assets/UPM#0.0.16
+* https://github.com/bluebackblue/UpmExcel.git?path=BlueBackExcel/Assets/UPM#0.0.17
 ### 開発
-* https://github.com/bluebackblue/Excel.git?path=unity_Excel/Assets/UPM
+* https://github.com/bluebackblue/UpmExcel.git?path=BlueBackExcel/Assets/UPM
 
 ## Unityへの追加方法
 * Unity起動

@@ -13,6 +13,7 @@
    "git_path":"unity_Excel/Assets/UPM",
    "git_author":"bluebackblue",
    "git_url":"https://github.com/",
+   "git_repos":"UpmExcel",
    "author_name":"BlueBack",
    "need_unity_version":"2020.1",
    "package_name":"Excel"
