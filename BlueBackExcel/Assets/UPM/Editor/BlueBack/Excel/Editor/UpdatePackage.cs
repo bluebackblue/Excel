@@ -28,9 +28,9 @@ namespace BlueBack.Excel.Editor
 				DebugTool.EditorLogError("GetLastReleaseNameFromGitHub : connect error");
 				#endif
 			}else if(t_version.Length <= 0){
-				UnityEditor.PackageManager.Client.Add("https://github.com/bluebackblue/Excel.git?path=unity_Excel/Assets/UPM");
+				UnityEditor.PackageManager.Client.Add("https://github.com/bluebackblue/Excel.git?path=BlueBackExcel/Assets/UPM");
 			}else{
-				UnityEditor.PackageManager.Client.Add("https://github.com/bluebackblue/Excel.git?path=unity_Excel/Assets/UPM#" + t_version);
+				UnityEditor.PackageManager.Client.Add("https://github.com/bluebackblue/Excel.git?path=BlueBackExcel/Assets/UPM#" + t_version);
 			}
 		}
 
