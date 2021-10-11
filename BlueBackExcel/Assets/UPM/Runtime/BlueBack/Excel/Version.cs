@@ -21,7 +21,7 @@ namespace BlueBack.Excel
 
 		/** packageversion
 		*/
-		public const string packageversion = "0.0.17";
+		public const string packageversion = "0.0.18";
 
 		/** GetPackageVersion
 		*/

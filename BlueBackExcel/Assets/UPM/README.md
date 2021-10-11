@@ -11,7 +11,6 @@ MIT License
 ## 依存 / 使用ライセンス等
 ### ランタイム
 ### エディター
-* https://github.com/bluebackblue/UpmExcel
 ### サンプル
 * https://github.com/bluebackblue/UpmExcel
 * https://github.com/bluebackblue/UpmAssetLib
@@ -22,7 +21,7 @@ Unity 2021.1.11f1
 
 ## UPM
 ### 最新
-* https://github.com/bluebackblue/UpmExcel.git?path=BlueBackExcel/Assets/UPM#0.0.17
+* https://github.com/bluebackblue/UpmExcel.git?path=BlueBackExcel/Assets/UPM#0.0.18
 ### 開発
 * https://github.com/bluebackblue/UpmExcel.git?path=BlueBackExcel/Assets/UPM
 
