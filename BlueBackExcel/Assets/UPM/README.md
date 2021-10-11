@@ -11,6 +11,7 @@ MIT License
 ## 依存 / 使用ライセンス等
 ### ランタイム
 ### エディター
+* https://github.com/bluebackblue/UpmExcel
 ### サンプル
 * https://github.com/bluebackblue/UpmExcel
 * https://github.com/bluebackblue/UpmAssetLib
@@ -21,7 +22,7 @@ Unity 2021.1.11f1
 
 ## UPM
 ### 最新
-* https://github.com/bluebackblue/UpmExcel.git?path=BlueBackExcel/Assets/UPM#0.0.18
+* https://github.com/bluebackblue/UpmExcel.git?path=BlueBackExcel/Assets/UPM#0.0.19
 ### 開発
 * https://github.com/bluebackblue/UpmExcel.git?path=BlueBackExcel/Assets/UPM
 
@@ -35,4 +36,5 @@ Unity 2021.1.11f1
 Gitクライアントがインストールされている必要がある。
 * https://docs.unity3d.com/ja/current/Manual/upm-git.html
 * https://git-scm.com/
+
 
