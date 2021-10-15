@@ -92,6 +92,7 @@ namespace BlueBack.Excel.EDR
 		*/
 		public int GetSheetCount()
 		{
+			#pragma warning disable 0168
 			try{
 				if(this.excel != null){
 					return this.excel.Tables.Count;
@@ -109,6 +110,7 @@ namespace BlueBack.Excel.EDR
 				DebugTool.Assert(false,t_exception);
 				#endif
 			}
+			#pragma warning restore
 
 			return 0;
 		}
@@ -117,6 +119,7 @@ namespace BlueBack.Excel.EDR
 		*/
 		public void SetActiveSheet(int a_sheet_index)
 		{
+			#pragma warning disable 0168
 			try{
 				if(this.excel != null){
 					this.activesheet = this.excel.Tables[a_sheet_index];
@@ -141,12 +144,14 @@ namespace BlueBack.Excel.EDR
 				DebugTool.Assert(false,t_exception);
 				#endif
 			}
+			#pragma warning restore
 		}
 
 		/** [BlueBack.Excel.Engine_Base]アクティブセル。設定。
 		*/
 		public void SetActiveCell(int a_x,int a_y)
 		{
+			#pragma warning disable 0168
 			try{
 				if(this.activesheet != null){
 					if((0 <= a_y)&&(a_y < this.activesheet.Rows.Count)){
@@ -189,12 +194,14 @@ namespace BlueBack.Excel.EDR
 
 				this.activecell = null;
 			}
+			#pragma warning restore
 		}
 
 		/** [BlueBack.Excel.Engine_Base]文字列。取得。
 		*/
 		public Result<string> TryGetCellString()
 		{
+			#pragma warning disable 0168
 			try{
 				if(this.activecell != null){
 					string t_result_value = this.activecell.ToString();
@@ -224,6 +231,7 @@ namespace BlueBack.Excel.EDR
 				DebugTool.Assert(false,t_exception);
 				#endif
 			}
+			#pragma warning restore
 
 			return new Result<string>(){
 				success = false,
@@ -235,6 +243,7 @@ namespace BlueBack.Excel.EDR
 		*/
 		public Result<double> TryGetCellDouble()
 		{
+			#pragma warning disable 0168
 			try{
 				if(this.activecell != null){
 					System.Type t_type = this.activecell.GetType();
@@ -307,6 +316,7 @@ namespace BlueBack.Excel.EDR
 				DebugTool.Assert(false,t_exception);
 				#endif
 			}
+			#pragma warning restore
 
 			return new Result<double>(){
 				success = false,
@@ -318,6 +328,7 @@ namespace BlueBack.Excel.EDR
 		*/
 		public Result<long> TryGetCellLong()
 		{
+			#pragma warning disable 0168
 			try{
 				if(this.activecell != null){
 					System.Type t_type = this.activecell.GetType();
@@ -390,6 +401,7 @@ namespace BlueBack.Excel.EDR
 				DebugTool.Assert(false,t_exception);
 				#endif
 			}
+			#pragma warning restore
 
 			return new Result<long>(){
 				success = false,
