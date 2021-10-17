@@ -18,11 +18,11 @@ MIT License
 * https://github.com/bluebackblue/UpmJsonItem
 
 ## 動作確認
-Unity 2021.1.11f1
+Unity 2021.2.0b9
 
 ## UPM
 ### 最新
-* https://github.com/bluebackblue/UpmExcel.git?path=BlueBackExcel/Assets/UPM#0.0.19
+* https://github.com/bluebackblue/UpmExcel.git?path=BlueBackExcel/Assets/UPM#0.0.20
 ### 開発
 * https://github.com/bluebackblue/UpmExcel.git?path=BlueBackExcel/Assets/UPM
 

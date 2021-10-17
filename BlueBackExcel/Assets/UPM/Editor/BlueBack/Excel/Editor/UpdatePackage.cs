@@ -20,21 +20,25 @@ namespace BlueBack.Excel.Editor
 		*/
 		public const string packageversion = Version.packageversion;
 
-		/** MenuItem_BlueBack_Excel_UpdatePackage
+		/** MenuItem_UpdatePackage_Develop
 		*/
 		#if(!DEF_USER_BLUEBACK_EXCEL)
-		[UnityEditor.MenuItem("BlueBack/Excel/UpdatePackage " + Version.packageversion)]
+		[UnityEditor.MenuItem("BlueBack/Excel/UpdatePackage/Develop")]
 		#endif
-		public static void MenuItem_BlueBack_Excel_UpdatePackage()
+		public static void MenuItem_UpdatePackage_Develop()
+		{
+			UnityEditor.PackageManager.Client.Add("https://github.com/bluebackblue/UpmExcel.git?path=BlueBackExcel/Assets/UPM");
+		}
+
+		/** MenuItem_UpdatePackage_Last
+		*/
+		#if(!DEF_USER_BLUEBACK_EXCEL)
+		[UnityEditor.MenuItem("BlueBack/Excel/UpdatePackage/Last " + Version.packageversion)]
+		#endif
+		public static void MenuItem_UpdatePackage_Last()
 		{
 			string t_version = GetLastReleaseNameFromGitHub();
-			if(t_version == null){
-				#if(UNITY_EDITOR)
-				DebugTool.EditorLogError("GetLastReleaseNameFromGitHub : connect error");
-				#endif
-			}else if(t_version.Length <= 0){
-				UnityEditor.PackageManager.Client.Add("https://github.com/bluebackblue/UpmExcel.git?path=BlueBackExcel/Assets/UPM");
-			}else{
+			if(t_version != null){
 				UnityEditor.PackageManager.Client.Add("https://github.com/bluebackblue/UpmExcel.git?path=BlueBackExcel/Assets/UPM#" + t_version);
 			}
 		}

@@ -1,8 +1,8 @@
 
 
-/** Samples.Excel.Convert.Editor
+/** Samples.Excel.Convert
 */
-namespace Samples.Excel.Convert.Editor
+namespace Samples.Excel.Convert
 {
 	/** MenuItem
 	*/
@@ -14,8 +14,8 @@ namespace Samples.Excel.Convert.Editor
 		[UnityEditor.MenuItem("サンプル/Excel/Convert/Local")]
 		private static void MenuItem_Local()
 		{
-			string t_path = BlueBack.AssetLib.Editor.FindFile.FindFileFistFromAssetsPath("","","^excel\\.xlsx$");
-			byte[] t_data = BlueBack.AssetLib.Editor.LoadBinary.LoadBinaryFromAssetsPath(t_path);
+			string t_path = BlueBack.AssetLib.Editor.FindFileWithAssetsPath.FindFirst("","","^excel\\.xlsx$");
+			byte[] t_data = BlueBack.AssetLib.Editor.LoadBinaryWithAssetsPath.Load(t_path);
 
 			if(t_data == null){
 				UnityEngine.Debug.Log("data = null");
@@ -48,7 +48,7 @@ namespace Samples.Excel.Convert.Editor
 		[UnityEditor.MenuItem("サンプル/Excel/Convert/Network")]
 		private static void MenuItem_Network()
 		{
-			byte[] t_data = BlueBack.AssetLib.Editor.LoadBinary.LoadBinaryFromUrl("https://docs.google.com/spreadsheets/d/1ZMGuCvnKSxBRYy8rYv9oh9KjcktXcte12i_5QSmYIPo/export?format=xlsx",null);
+			byte[] t_data = BlueBack.AssetLib.Editor.LoadBinaryWithUrl.Load("https://docs.google.com/spreadsheets/d/1ZMGuCvnKSxBRYy8rYv9oh9KjcktXcte12i_5QSmYIPo/export?format=xlsx",null);
 
 			if(t_data == null){
 				UnityEngine.Debug.Log("data = null");
