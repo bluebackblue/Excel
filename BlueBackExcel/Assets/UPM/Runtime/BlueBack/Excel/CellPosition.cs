@@ -1,9 +1,9 @@
 
 
 /**
- * Copyright (c) blueback
- * Released under the MIT License
- * @brief セル位置。
+	Copyright (c) blueback
+	Released under the MIT License
+	@brief セル位置。
 */
 
 
