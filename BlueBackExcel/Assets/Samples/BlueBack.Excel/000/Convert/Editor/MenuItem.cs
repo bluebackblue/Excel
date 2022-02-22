@@ -1,8 +1,8 @@
 
 
-/** Samples.Excel.Convert
+/** BlueBack.Excel.Samples.Convert.Editor
 */
-namespace Samples.Excel.Convert
+namespace BlueBack.Excel.Samples.Convert.Editor
 {
 	/** MenuItem
 	*/
@@ -11,8 +11,8 @@ namespace Samples.Excel.Convert
 	{
 		/** ローカル。
 		*/
-		[UnityEditor.MenuItem("サンプル/Excel/Convert/Local")]
-		private static void MenuItem_Local()
+		[UnityEditor.MenuItem("Samples/Excel/Convert/FromLocal")]
+		private static void MenuItem_FromLocal()
 		{
 			string t_path = BlueBack.AssetLib.Editor.FindFileWithAssetsPath.FindFirst("","","^excel\\.xlsx$");
 			byte[] t_data = BlueBack.AssetLib.Editor.LoadBinaryWithAssetsPath.Load(t_path);
@@ -45,8 +45,8 @@ namespace Samples.Excel.Convert
 
 		/** ネットワーク。
 		*/
-		[UnityEditor.MenuItem("サンプル/Excel/Convert/Network")]
-		private static void MenuItem_Network()
+		[UnityEditor.MenuItem("Samples/Excel/Convert/FromNetwork")]
+		private static void MenuItem_FromNetwork()
 		{
 			byte[] t_data = BlueBack.AssetLib.Editor.LoadBinaryWithUrl.Load("https://docs.google.com/spreadsheets/d/1ZMGuCvnKSxBRYy8rYv9oh9KjcktXcte12i_5QSmYIPo/export?format=xlsx",null);
 

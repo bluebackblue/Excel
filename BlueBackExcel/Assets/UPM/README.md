@@ -10,6 +10,7 @@ MIT License
 
 ## 依存 / 使用ライセンス等
 ### ランタイム
+* https://github.com/ExcelDataReader/ExcelDataReader
 * https://github.com/bluebackblue/UpmJsonItem
 ### エディター
 * https://github.com/bluebackblue/UpmExcel
@@ -23,7 +24,7 @@ Unity 2022.1.0b2
 
 ## UPM
 ### 最新
-* https://github.com/bluebackblue/UpmExcel.git?path=BlueBackExcel/Assets/UPM#0.0.20
+* https://github.com/bluebackblue/UpmExcel.git?path=BlueBackExcel/Assets/UPM#0.0.21
 ### 開発
 * https://github.com/bluebackblue/UpmExcel.git?path=BlueBackExcel/Assets/UPM
 
