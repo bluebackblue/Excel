@@ -1,75 +1,81 @@
 {
-    "namespace_author":"BlueBack",
-    "namespace_package":"Excel",
-    "git_url":"https://github.com/bluebackblue/UpmExcel",
-    "git_api":"https://api.github.com/repos/bluebackblue/UpmExcel",
-    "git_path":"BlueBackExcel/Assets/UPM",
-    "discription_simple":"Excel操作",
-    "discription_detal":[
-        "Excel操作",
-        "* スプレッドシートからの読み込み",
-        "* バイナリからの読み込み",
-        "* JsonItemへのコンバート"
-    ],
-    "keyword":[
-        "excel"
-    ],
-    "changelog":[
-        "# Changelog",
-        "",
-        "## [0.0.0] - 2021-04-05",
-        "### Changes",
-        "- Init",
-        ""
-    ],
-    "root_readmemd_path":"../../README.md",
-    "need_unity_version":"2020.1",
-    "asmdef_runtime":{
-        "define_list":[
-        ],
-        "reference_list":[
-            {
-			    "mode":"url",
-                "package_fullname":null,
-                "url":"https://github.com/ExcelDataReader/ExcelDataReader"
-            },
-            {
-			    "mode":"package",
-                "package_fullname":"BlueBack.JsonItem",
-                "url":"https://github.com/bluebackblue/UpmJsonItem"
+	"namespace_author":"BlueBack",
+	"namespace_package":"Excel",
+	"git_url":"https://github.com/bluebackblue/UpmExcel",
+	"git_api":"https://api.github.com/repos/bluebackblue/UpmExcel",
+	"git_path":"BlueBackExcel/Assets/UPM",
+	"discription_simple":"Excel操作",
+	"discription_detal":[
+		"Excel操作",
+		"* スプレッドシートからの読み込み",
+		"* バイナリからの読み込み",
+		"* JsonItemへのコンバート"
+	],
+	"keyword":[
+		"excel"
+	],
+	"changelog":[
+		"# Changelog",
+		"",
+		"## [0.0.0] - 2021-04-05",
+		"### Changes",
+		"- Init",
+		""
+	],
+	"root_readmemd_path":"../../README.md",
+	"need_unity_version":"2020.1",
+	"asmdef_runtime":{
+		"define_list":[
+		],
+		"reference_list":[
+			{
+				"mode":"url",
+				"package_fullname":null,
+				"url":"https://github.com/ExcelDataReader/ExcelDataReader",
+				"define_package_pathname":null
+			},
+			{
+				"mode":"package",
+				"package_fullname":"BlueBack.JsonItem",
+				"url":"https://github.com/bluebackblue/UpmJsonItem",
+				"define_package_pathname":"blueback.jsonitem"
 			}
-        ]
-    },
-    "asmdef_editor":{
-        "define_list":[
-        ],
-        "reference_list":[
-            {
-			    "mode":"package",
-                "package_fullname":"BlueBack.Excel",
-                "url":"https://github.com/bluebackblue/UpmExcel"
-            }
-        ]
-    },
-    "asmdef_sample":{
-        "define_list":[
-        ],
-        "reference_list":[
-            {
-			    "mode":"package",
-                "package_fullname":"BlueBack.Excel",
-                "url":"https://github.com/bluebackblue/UpmExcel"
-            },
-            {
-			    "mode":"package",
-                "package_fullname":"BlueBack.AssetLib.Editor",
-                "url":"https://github.com/bluebackblue/UpmAssetLib"
-            },
-            {
-			    "mode":"package",
-                "package_fullname":"BlueBack.JsonItem",
-                "url":"https://github.com/bluebackblue/UpmJsonItem"
-            }
-        ]
-    }
+		]
+	},
+	"asmdef_editor":{
+		"define_list":[
+		],
+		"reference_list":[
+			{
+				"mode":"package",
+				"package_fullname":"BlueBack.Excel",
+				"url":"https://github.com/bluebackblue/UpmExcel",
+				"define_package_pathname":"blueback.excel"
+			}
+		]
+	},
+	"asmdef_sample":{
+		"define_list":[
+		],
+		"reference_list":[
+			{
+				"mode":"package",
+				"package_fullname":"BlueBack.Excel",
+				"url":"https://github.com/bluebackblue/UpmExcel",
+				"define_package_pathname":"blueback.excel"
+			},
+			{
+				"mode":"package",
+				"package_fullname":"BlueBack.AssetLib.Editor",
+				"url":"https://github.com/bluebackblue/UpmAssetLib",
+				"define_package_pathname":"blueback.assetlib"
+			},
+			{
+				"mode":"package",
+				"package_fullname":"BlueBack.JsonItem",
+				"url":"https://github.com/bluebackblue/UpmJsonItem",
+				"define_package_pathname":"blueback.jsonitem"
+			}
+		]
+	}
 }
