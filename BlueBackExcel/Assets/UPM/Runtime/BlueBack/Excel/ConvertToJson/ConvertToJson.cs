@@ -7,12 +7,22 @@
 */
 
 
+/** define
+*/
+#if((ASMDEF_BLUEBACK_JSONITEM)||(USERDEF_BLUEBACK_JSONITEM))
+#define ASMDEF_TRUE
+#else
+#warning "ASMDEF_TRUE"
+#endif
+
+
 /** BlueBack.Excel.ConvertToJson
 */
 namespace BlueBack.Excel.ConvertToJson
 {
 	/** ConvertToJson
 	*/
+	#if(ASMDEF_TRUE)
 	public static class ConvertToJson
 	{
 		/** Convert
@@ -225,5 +235,6 @@ namespace BlueBack.Excel.ConvertToJson
 			}
 		}	
 	}
+	#endif
 }
 

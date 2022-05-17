@@ -2,6 +2,7 @@
 
 /** BlueBack.Excel.Samples.Convert.Editor
 */
+#if(!DEF_BLUEBACK_EXCEL_SAMPLES_DISABLE)
 namespace BlueBack.Excel.Samples.Convert.Editor
 {
 	/** MenuItem
@@ -78,4 +79,5 @@ namespace BlueBack.Excel.Samples.Convert.Editor
 	}
 	#endif
 }
+#endif
 

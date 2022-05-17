@@ -22,7 +22,7 @@ namespace BlueBack.Excel.Editor
 
 		/** MenuItem_UpdatePackage_Develop
 		*/
-		#if(!DEF_USER_BLUEBACK_EXCEL)
+		#if(!USERDEF_BLUEBACK_EXCEL)
 		[UnityEditor.MenuItem("BlueBack/Excel/UpdatePackage/Develop")]
 		#endif
 		public static void MenuItem_UpdatePackage_Develop()
@@ -40,7 +40,7 @@ namespace BlueBack.Excel.Editor
 
 		/** MenuItem_UpdatePackage_Last
 		*/
-		#if(!DEF_USER_BLUEBACK_EXCEL)
+		#if(!USERDEF_BLUEBACK_EXCEL)
 		[UnityEditor.MenuItem("BlueBack/Excel/UpdatePackage/Last " + Version.packageversion)]
 		#endif
 		public static void MenuItem_UpdatePackage_Last()
