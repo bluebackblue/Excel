@@ -221,7 +221,7 @@ namespace BlueBack.Excel
 
 			return t_size;
 		}
-		
+
 		/** ReadAsync
 		*/
 		/*

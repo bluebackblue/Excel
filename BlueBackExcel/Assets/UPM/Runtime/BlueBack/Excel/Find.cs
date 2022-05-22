@@ -84,7 +84,7 @@ namespace BlueBack.Excel
 		public static Result<CellPosition> FindCellLeftTopPriorityFromActiveSheetRange(Excel a_excel,int a_x,int a_y,int a_size,string a_text)
 		{
 			for(int t_size=1;t_size<a_size;t_size++){
-				
+
 				//下。
 				{
 					int yy = t_size - 1;

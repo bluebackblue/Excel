@@ -130,7 +130,7 @@ namespace BlueBack.Excel.ConvertToJson
 				for(int xx = t_pos_param_type.value.x + 1;xx < t_pos_end_x.value.x;xx++){
 					ParamType t_param_type;
 					Result<string> t_cell_param_type = a_excel.TryGetCellStringFromActiveSheet(xx,t_pos_param_type.value.y);
-					
+
 					#pragma warning disable 0162
 					switch(t_cell_param_type.value){
 					case Config.PARAMTYPE_STRING:
@@ -187,7 +187,7 @@ namespace BlueBack.Excel.ConvertToJson
 
 				for(int yy=t_pos_root.value.y + 1;yy<t_pos_end_y.value.y;yy++){
 					if(Find.CheckCellFromActiveSheet(a_excel,t_pos_root.value.x,yy,Config.COMMAND_ENABLELINE) == true){
-						
+
 						//ラインJSON作成。
 						JsonItem.JsonItem t_line_jsonitem = new JsonItem.JsonItem(new JsonItem.Value_AssociativeArray());
 						for(int ii=0;ii<t_paramlist.Count;ii++){
