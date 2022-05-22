@@ -49,7 +49,7 @@ namespace BlueBack.Excel.Samples.Convert.Editor
 		[UnityEditor.MenuItem("Samples/Excel/Convert/FromNetwork")]
 		private static void MenuItem_FromNetwork()
 		{
-			byte[] t_data = BlueBack.AssetLib.Editor.LoadBinaryWithUrl.Load("https://docs.google.com/spreadsheets/d/1ZMGuCvnKSxBRYy8rYv9oh9KjcktXcte12i_5QSmYIPo/export?format=xlsx",null);
+			byte[] t_data = BlueBack.AssetLib.LoadBinaryWithUrl.Load("https://docs.google.com/spreadsheets/d/1ZMGuCvnKSxBRYy8rYv9oh9KjcktXcte12i_5QSmYIPo/export?format=xlsx",null);
 
 			if(t_data == null){
 				UnityEngine.Debug.Log("data = null");
