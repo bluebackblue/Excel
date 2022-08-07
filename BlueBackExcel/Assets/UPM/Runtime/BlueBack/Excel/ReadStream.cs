@@ -58,7 +58,7 @@ namespace BlueBack.Excel
 		*/
 		/*
 		public override bool CanTimeout{get{
-			#if(DEF_BLUEBACK_EXCEL_ASSERT)
+			#if(DEF_BLUEBACK_ASSERT)
 			DebugTool.Assert(false);
 			#endif
 			return false;
@@ -81,12 +81,12 @@ namespace BlueBack.Excel
 		*/
 		/*
 		public override int ReadTimeout{get{
-			#if(DEF_BLUEBACK_EXCEL_ASSERT)
+			#if(DEF_BLUEBACK_ASSERT)
 			DebugTool.Assert(false);
 			#endif
 			return 0;
 		}set{
-			#if(DEF_BLUEBACK_EXCEL_ASSERT)
+			#if(DEF_BLUEBACK_ASSERT)
 			DebugTool.Assert(false);
 			#endif
 		}}
@@ -96,12 +96,12 @@ namespace BlueBack.Excel
 		*/
 		/*
 		public override int WriteTimeout{get{
-			#if(DEF_BLUEBACK_EXCEL_ASSERT)
+			#if(DEF_BLUEBACK_ASSERT)
 			DebugTool.Assert(false);
 			#endif
 			return 0;
 		}set{
-			#if(DEF_BLUEBACK_EXCEL_ASSERT)
+			#if(DEF_BLUEBACK_ASSERT)
 			DebugTool.Assert(false);
 			#endif
 		}}
@@ -112,7 +112,7 @@ namespace BlueBack.Excel
 		/*
 		public override System.IAsyncResult BeginRead(byte[] a_buffer,int a_offset,int a_count,System.AsyncCallback a_callback,object a_state)
 		{
-			#if(DEF_BLUEBACK_EXCEL_ASSERT)
+			#if(DEF_BLUEBACK_ASSERT)
 			DebugTool.Assert(false);
 			#endif
 			return null;
@@ -124,7 +124,7 @@ namespace BlueBack.Excel
 		/*
 		public override System.IAsyncResult BeginWrite(byte[] a_buffer,int a_offset,int a_count,System.AsyncCallback a_callback,object a_state)
 		{
-			#if(DEF_BLUEBACK_EXCEL_ASSERT)
+			#if(DEF_BLUEBACK_ASSERT)
 			DebugTool.Assert(false);
 			#endif
 			return null;
@@ -144,7 +144,7 @@ namespace BlueBack.Excel
 		/*
 		public override System.Threading.Tasks.Task CopyToAsync(System.IO.Stream a_destination,int a_buffer_size,System.Threading.CancellationToken a_cancellation_token)
 		{
-			#if(DEF_BLUEBACK_EXCEL_ASSERT)
+			#if(DEF_BLUEBACK_ASSERT)
 			DebugTool.Assert(false);
 			#endif
 			return null;
@@ -156,7 +156,7 @@ namespace BlueBack.Excel
 		/*
 		public override int EndRead(System.IAsyncResult a_async_result)
 		{
-			#if(DEF_BLUEBACK_EXCEL_ASSERT)
+			#if(DEF_BLUEBACK_ASSERT)
 			DebugTool.Assert(false);
 			#endif
 			return 0;
@@ -168,7 +168,7 @@ namespace BlueBack.Excel
 		/*
 		public override void EndWrite(System.IAsyncResult a_async_result)
 		{
-			#if(DEF_BLUEBACK_EXCEL_ASSERT)
+			#if(DEF_BLUEBACK_ASSERT)
 			DebugTool.Assert(false);
 			#endif
 		}
@@ -185,7 +185,7 @@ namespace BlueBack.Excel
 		/*
 		public override System.Threading.Tasks.Task FlushAsync(System.Threading.CancellationToken a_cancellation_token)
 		{
-			#if(DEF_BLUEBACK_EXCEL_ASSERT)
+			#if(DEF_BLUEBACK_ASSERT)
 			DebugTool.Assert(false);
 			#endif
 			return null;
@@ -202,14 +202,14 @@ namespace BlueBack.Excel
 				if(t_size < 0){
 					t_size = 0;
 
-					#if(DEF_BLUEBACK_EXCEL_ASSERT)
+					#if(DEF_BLUEBACK_ASSERT)
 					DebugTool.Assert(false);
 					#endif
 				}
 			}else{
 				t_size = 0;
 
-				#if(DEF_BLUEBACK_EXCEL_ASSERT)
+				#if(DEF_BLUEBACK_ASSERT)
 				DebugTool.Assert(false);
 				#endif
 			}
@@ -227,7 +227,7 @@ namespace BlueBack.Excel
 		/*
 		public override System.Threading.Tasks.Task<int> ReadAsync(byte[] a_buffer,int a_offset,int a_count,System.Threading.CancellationToken a_cancellation_token)
 		{
-			#if(DEF_BLUEBACK_EXCEL_ASSERT)
+			#if(DEF_BLUEBACK_ASSERT)
 			DebugTool.Assert(false);
 			#endif
 			return null;
@@ -267,7 +267,7 @@ namespace BlueBack.Excel
 					}else{
 						this.position = a_offset;
 
-						#if(DEF_BLUEBACK_EXCEL_ASSERT)
+						#if(DEF_BLUEBACK_ASSERT)
 						DebugTool.Assert(false);
 						#endif
 					}
@@ -281,7 +281,7 @@ namespace BlueBack.Excel
 		*/
 		public override void SetLength(long a_value)
 		{
-			#if(DEF_BLUEBACK_EXCEL_ASSERT)
+			#if(DEF_BLUEBACK_ASSERT)
 			DebugTool.Assert(false);
 			#endif
 		}
@@ -290,7 +290,7 @@ namespace BlueBack.Excel
 		*/
 		public override void Write(byte[] a_buffer,int a_offset,int a_count)
 		{
-			#if(DEF_BLUEBACK_EXCEL_ASSERT)
+			#if(DEF_BLUEBACK_ASSERT)
 			DebugTool.Assert(false);
 			#endif
 		}
@@ -300,7 +300,7 @@ namespace BlueBack.Excel
 		/*
 		public override System.Threading.Tasks.Task WriteAsync(byte[] a_buffer,int a_offset,int a_count,System.Threading.CancellationToken a_cancellation_token)
 		{
-			#if(DEF_BLUEBACK_EXCEL_ASSERT)
+			#if(DEF_BLUEBACK_ASSERT)
 			DebugTool.Assert(false);
 			#endif
 			return null;
@@ -312,7 +312,7 @@ namespace BlueBack.Excel
 		/*
 		public override void WriteByte(byte a_value)
 		{
-			#if(DEF_BLUEBACK_EXCEL_ASSERT)
+			#if(DEF_BLUEBACK_ASSERT)
 			DebugTool.Assert(false);
 			#endif
 		}

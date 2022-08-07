@@ -58,7 +58,7 @@ namespace BlueBack.Excel.EDR
 						}else{
 							//破損。
 
-							#if(DEF_BLUEBACK_EXCEL_ASSERT)
+							#if(DEF_BLUEBACK_ASSERT)
 							DebugTool.Assert(false);
 							#endif
 						}
@@ -67,7 +67,7 @@ namespace BlueBack.Excel.EDR
 			}catch(System.Exception t_exception){
 				//ファイルが開けない。
 
-				#if(DEF_BLUEBACK_EXCEL_ASSERT)
+				#if(DEF_BLUEBACK_ASSERT)
 				DebugTool.Assert(false,t_exception);
 				#endif
 			}
@@ -99,14 +99,14 @@ namespace BlueBack.Excel.EDR
 				}else{
 					//ファイルを開いていない。
 
-					#if(DEF_BLUEBACK_EXCEL_ASSERT)
+					#if(DEF_BLUEBACK_ASSERT)
 					DebugTool.Assert(false);
 					#endif
 				}
 			}catch(System.Exception t_exception){
 				//不明。
 
-				#if(DEF_BLUEBACK_EXCEL_ASSERT)
+				#if(DEF_BLUEBACK_ASSERT)
 				DebugTool.Assert(false,t_exception);
 				#endif
 			}
@@ -126,21 +126,21 @@ namespace BlueBack.Excel.EDR
 					if(this.activesheet == null){
 						//不明。
 
-						#if(DEF_BLUEBACK_EXCEL_ASSERT)
+						#if(DEF_BLUEBACK_ASSERT)
 						DebugTool.Assert(false);
 						#endif
 					}
 				}else{
 					//ファイルを開いていない。
 
-					#if(DEF_BLUEBACK_EXCEL_ASSERT)
+					#if(DEF_BLUEBACK_ASSERT)
 					DebugTool.Assert(false);
 					#endif
 				}
 			}catch(System.Exception t_exception){
 				//範囲外。
 
-				#if(DEF_BLUEBACK_EXCEL_ASSERT)
+				#if(DEF_BLUEBACK_ASSERT)
 				DebugTool.Assert(false,t_exception);
 				#endif
 			}
@@ -161,7 +161,7 @@ namespace BlueBack.Excel.EDR
 							if(this.activecell == null){
 								//不明。
 
-								#if(DEF_BLUEBACK_EXCEL_ASSERT)
+								#if(DEF_BLUEBACK_ASSERT)
 								DebugTool.Assert(false);
 								#endif
 							}
@@ -178,7 +178,7 @@ namespace BlueBack.Excel.EDR
 				}else{
 					//シートを開いていない。
 
-					#if(DEF_BLUEBACK_EXCEL_ASSERT)
+					#if(DEF_BLUEBACK_ASSERT)
 					DebugTool.Assert(false);
 					#endif
 
@@ -188,7 +188,7 @@ namespace BlueBack.Excel.EDR
 			}catch(System.Exception t_exception){
 				//不明。
 
-				#if(DEF_BLUEBACK_EXCEL_ASSERT)
+				#if(DEF_BLUEBACK_ASSERT)
 				DebugTool.Assert(false,t_exception);
 				#endif
 
@@ -213,7 +213,7 @@ namespace BlueBack.Excel.EDR
 					}else{
 						//不明。
 
-						#if(DEF_BLUEBACK_EXCEL_ASSERT)
+						#if(DEF_BLUEBACK_ASSERT)
 						DebugTool.Assert(false);
 						#endif
 					}
@@ -227,7 +227,7 @@ namespace BlueBack.Excel.EDR
 			}catch(System.Exception t_exception){
 				//不明。
 
-				#if(DEF_BLUEBACK_EXCEL_ASSERT)
+				#if(DEF_BLUEBACK_ASSERT)
 				DebugTool.Assert(false,t_exception);
 				#endif
 			}
@@ -256,7 +256,7 @@ namespace BlueBack.Excel.EDR
 						}else{
 							//未対応の型。
 
-							#if(DEF_BLUEBACK_EXCEL_ASSERT)
+							#if(DEF_BLUEBACK_ASSERT)
 							DebugTool.Assert(false);
 							#endif
 
@@ -276,14 +276,14 @@ namespace BlueBack.Excel.EDR
 							}else{
 								//数値にパースできない。
 
-								#if(DEF_BLUEBACK_EXCEL_ASSERT)
+								#if(DEF_BLUEBACK_ASSERT)
 								DebugTool.Assert(false);
 								#endif
 							}
 						}else{
 							//不明。
 
-							#if(DEF_BLUEBACK_EXCEL_ASSERT)
+							#if(DEF_BLUEBACK_ASSERT)
 							DebugTool.Assert(false);
 							#endif
 						}
@@ -297,7 +297,7 @@ namespace BlueBack.Excel.EDR
 					}else{
 						//不明。
 
-						#if(DEF_BLUEBACK_EXCEL_ASSERT)
+						#if(DEF_BLUEBACK_ASSERT)
 						DebugTool.Assert(false);
 						#endif
 					}
@@ -312,7 +312,7 @@ namespace BlueBack.Excel.EDR
 			}catch(System.Exception t_exception){
 				//不明。
 
-				#if(DEF_BLUEBACK_EXCEL_ASSERT)
+				#if(DEF_BLUEBACK_ASSERT)
 				DebugTool.Assert(false,t_exception);
 				#endif
 			}
@@ -341,7 +341,7 @@ namespace BlueBack.Excel.EDR
 						}else{
 							//未対応の型。
 
-							#if(DEF_BLUEBACK_EXCEL_ASSERT)
+							#if(DEF_BLUEBACK_ASSERT)
 							DebugTool.Assert(false);
 							#endif
 
@@ -361,14 +361,14 @@ namespace BlueBack.Excel.EDR
 							}else{
 								//数値にパースできない。
 
-								#if(DEF_BLUEBACK_EXCEL_ASSERT)
+								#if(DEF_BLUEBACK_ASSERT)
 								DebugTool.Assert(false);
 								#endif
 							}
 						}else{
 							//不明。
 
-							#if(DEF_BLUEBACK_EXCEL_ASSERT)
+							#if(DEF_BLUEBACK_ASSERT)
 							DebugTool.Assert(false);
 							#endif
 						}
@@ -382,7 +382,7 @@ namespace BlueBack.Excel.EDR
 					}else{
 						//不明。
 
-						#if(DEF_BLUEBACK_EXCEL_ASSERT)
+						#if(DEF_BLUEBACK_ASSERT)
 						DebugTool.Assert(false);
 						#endif
 					}
@@ -397,7 +397,7 @@ namespace BlueBack.Excel.EDR
 			}catch(System.Exception t_exception){
 				//不明。
 
-				#if(DEF_BLUEBACK_EXCEL_ASSERT)
+				#if(DEF_BLUEBACK_ASSERT)
 				DebugTool.Assert(false,t_exception);
 				#endif
 			}
